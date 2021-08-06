@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "C6EXXj28lD1GOCMEgXqjUluK7VaL9osSw6ghn8QHpzC1IdiiRkRARh4UAP0KU5QAxDAl+s8csFYskP3RwTpVZA==",
+  "success": true,
+  "projectFilePath": "D:\\GitHub\\QuanLyCuaHangVangBac\\QuanLyCuaHangVangBac.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\taqua\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.7\\microsoft.netcore.app.host.win-x64.5.0.7.nupkg.sha512"
+  ],
+  "logs": []
+}
