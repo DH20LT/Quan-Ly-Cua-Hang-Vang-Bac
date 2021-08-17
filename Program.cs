@@ -6,40 +6,41 @@ namespace QuanLyCuaHangVangBac
     {
         static void Main(string[] args)
         {
+            Console.InputEncoding = System.Text.Encoding.Unicode;
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
+            
             VangBac[] arrVangBac = new VangBac[50];
             int iVangBac = 0;
             //int l, j, tmp;
-            Console.WriteLine("1. Nhap Thong Tin San Pham");
-            Console.WriteLine("2. Xuat ra các san pham Vang");
-            Console.WriteLine("3. Xuat ra cac san pham duoc san xuat boi hang PNJ");
-            Console.WriteLine("4. Xuat ra cac san pham la Bac loai 10k");
-            Console.WriteLine("5. Xuat ra cac san pham la Bac kieu Day chuyen");
-            Console.WriteLine("6. Sap xep cac san pham co gia tang dan");
-            Console.WriteLine("7. Thoát");
-            Console.Write("Nhập chức năng bạn muốn su dụng: ");
-            int i = 1;
-            while (i < 50)
+            
+            do
             {
-                int ChucNang = int.Parse(Console.ReadLine());
+                Console.Clear();
+                Console.WriteLine("1. Nhap Thong Tin San Pham"); // DONE
+                Console.WriteLine("2. Xuat ra các san pham Vang"); // DONE
+                Console.WriteLine("3. Xuat ra các san pham Bac"); // DONE
+                Console.WriteLine("4. Xuat ra cac san pham duoc san xuat boi hang PNJ");
+                Console.WriteLine("5. Xuat ra cac san pham la Bac loai 10k");
+                Console.WriteLine("6. Xuat ra cac san pham la Bac kieu Day chuyen");
+                Console.WriteLine("7. Sap xep cac san pham co gia tang dan");
+                Console.WriteLine("0. Thoát");
+                Console.Write("Nhập chức năng bạn muốn su dụng: ");
+                int ChucNang = 10;
+                try
+                {
+                    ChucNang = int.Parse(Console.ReadLine());
+                } catch
+                {
+                    Console.WriteLine("Nhập lại: ");
+                }
                 switch (ChucNang)
                 {
+                    case 0:
+                        Environment.Exit(0);
+                        break;
                     case 1: //Nhập thông tin sản phẩm
                         {
-                            //Console.WriteLine("--------------------------------");
-                            //Console.Write("Ban muon nhap Vang hay Bac?");
-                            //string LoaiSanPham = Console.ReadLine();
-                            //if(LoaiSanPham == "Vang")
-                            //{
-                            //    iVangBac++;
-                            //    arrVangBac[iVangBac] = new Vang();
-                            //    arrVangBac[iVangBac].NhapThongTin();
-                            //}
-                            //else if(LoaiSanPham == "Bac")
-                            //{
-                            //    iVangBac++;
-                            //    arrVangBac[iVangBac] = new Bac();
-                            //    arrVangBac[iVangBac].NhapThongTin();
-                            //}
+                            
                             Console.WriteLine("--------------------------------");
                             Console.WriteLine("Vang = 1 | Bac = 2");
                             Console.Write("Nhap: ");
@@ -48,16 +49,18 @@ namespace QuanLyCuaHangVangBac
                             {
                                 case 1:
                                     {
-                                        iVangBac++;
                                         arrVangBac[iVangBac] = new Vang();
                                         arrVangBac[iVangBac].NhapThongTin();
+                                        arrVangBac[0].XuatThongTin();
+                                        Console.ReadLine();
+                                        iVangBac++;
                                         break;
                                     }
                                 case 2:
                                     {
-                                        iVangBac++;
                                         arrVangBac[iVangBac] = new Bac();
                                         arrVangBac[iVangBac].NhapThongTin();
+                                        iVangBac++;
                                         break;
                                     }
                                 default:
@@ -66,20 +69,33 @@ namespace QuanLyCuaHangVangBac
 
                             break;
                         }
-                    case 2:
+                    case 2: // Xuat ra các san pham Vang
                         {
-                            for (int ThuTu = 1; ThuTu < iVangBac; ThuTu++)
+                            for (int ThuTu = 0; ThuTu < iVangBac; ThuTu++)
                             {
                                 if (arrVangBac[ThuTu].getLoaiSP() == 1)
                                 {
                                     arrVangBac[ThuTu].XuatThongTin();
                                 }
                             }
+                            Console.ReadLine();
                             break;
                         }
-                    case 3:
+                    case 3: // Xuat ra các san pham Vang
                         {
-                            for (int ThuTu = 1; ThuTu < iVangBac; ThuTu++)
+                            for (int ThuTu = 0; ThuTu < iVangBac; ThuTu++)
+                            {
+                                if (arrVangBac[ThuTu].getLoaiSP() == 2)
+                                {
+                                    arrVangBac[ThuTu].XuatThongTin();
+                                }
+                            }
+                            break;
+                        }
+
+                    case 4: //  Xuat ra cac san pham duoc san xuat boi hang PNJ
+                        {
+                            for (int ThuTu = 0; ThuTu < iVangBac; ThuTu++)
                             {
                                 if (arrVangBac[ThuTu].getHangsx() == "PNJ")
                                 {
@@ -88,9 +104,10 @@ namespace QuanLyCuaHangVangBac
                             }
                             break;
                         }
-                    case 4: // Xuat ra tat ca san pham la Bac loai 10k
+
+                    case 5: //Xuat ra cac san pham la Bac loai 10k
                         {
-                            for (int ThuTu = 1; ThuTu < iVangBac; ThuTu++)
+                            for (int ThuTu = 0; ThuTu < iVangBac; ThuTu++)
                             {
                                 if (arrVangBac[ThuTu].getLoaiSP() == 2)
                                 {
@@ -99,7 +116,7 @@ namespace QuanLyCuaHangVangBac
                             }
                             break;
                         }
-                    case 5:
+                    case 6: // Xuat ra cac san pham la Bac kieu Day chuyen
                         {
                             for (int ThuTu = 1; ThuTu < iVangBac; ThuTu++)
                             {
@@ -110,28 +127,32 @@ namespace QuanLyCuaHangVangBac
                             }
                             break;
                         }
-                    case 6: // Sap xep cac san pham co gia tang dan
+                    case 7: // Sap xep cac san pham co gia tang dan
                         {
-                            //for (l = 0; l < 50; l++)
-                            //{
-                            //    for (j = l + 1; j < 50; j++)
-                            //    {
-                            //        if (arrVangBac[j].getDongia() < arrVangBac[l].getDongia())
-                            //        {
-                            //            tmp = arrVangBac[l].getDongia();
-                            //            arrVangBac[l].getDongia() = arrVangBac[l].getDongia();
-                            //            arrVangBac[j].getDongia() = tmp;
-                            //        }
-                            //    }
-                            //}
+                            for (int l = 0; l < 50; l++)
+                            {
+                                for (int j = l + 1; j < 50; j++)
+                                {
+                                    if (arrVangBac[j].getDonGia() < arrVangBac[l].getDonGia())
+                                    {
+                                        VangBac tmp = arrVangBac[l];
+                                        arrVangBac[l] = arrVangBac[j];
+                                        arrVangBac[j] = tmp;
+                                    }
+                                }
+                            }
+                            for (int ThuTu = 0; ThuTu < iVangBac; ThuTu++)
+                            {
+                                arrVangBac[ThuTu].XuatThongTin();
+                            }
                             break;
                         }
+                    
                     default:
                         break;
                 }
                 
-                i++;
-            }
+            }while(true);
         }
         public static void XuatBac10k(Bac bac1)
         {
