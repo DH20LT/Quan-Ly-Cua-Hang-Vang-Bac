@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\QuanLyCuaHangVangBac\\QuanLyCuaHangVangBac.csproj": {}
+    "D:\\GitHub\\SendToTeacher\\QuanLyCuaHangVangBac\\QuanLyCuaHangVangBac.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\QuanLyCuaHangVangBac\\QuanLyCuaHangVangBac.csproj": {
+    "D:\\GitHub\\SendToTeacher\\QuanLyCuaHangVangBac\\QuanLyCuaHangVangBac.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\QuanLyCuaHangVangBac\\QuanLyCuaHangVangBac.csproj",
+        "projectUniqueName": "D:\\GitHub\\SendToTeacher\\QuanLyCuaHangVangBac\\QuanLyCuaHangVangBac.csproj",
         "projectName": "QuanLyCuaHangVangBac",
-        "projectPath": "D:\\GitHub\\QuanLyCuaHangVangBac\\QuanLyCuaHangVangBac.csproj",
+        "projectPath": "D:\\GitHub\\SendToTeacher\\QuanLyCuaHangVangBac\\QuanLyCuaHangVangBac.csproj",
         "packagesPath": "C:\\Users\\taqua\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\QuanLyCuaHangVangBac\\obj\\",
+        "outputPath": "D:\\GitHub\\SendToTeacher\\QuanLyCuaHangVangBac\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\taqua\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -52,7 +56,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.7, 5.0.7]"
+              "version": "[5.0.8, 5.0.8]"
             }
           ],
           "frameworkReferences": {
@@ -60,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.6.21355.2\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
         }
       }
     }

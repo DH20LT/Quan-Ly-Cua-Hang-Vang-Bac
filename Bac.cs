@@ -17,6 +17,7 @@ namespace QuanLyCuaHangVangBac
 			kieuBac = "";
 			loaiBac = "";
 			soLuong = 0;
+			setLoaiSP(2);
 		}
 		public Bac(string maSP, string tenSP, string hangSX, int donGia,
 			string kieuBac, string loaiBac, int soLuong)
@@ -25,6 +26,7 @@ namespace QuanLyCuaHangVangBac
 			this.kieuBac = kieuBac;
 			this.loaiBac = loaiBac;
 			this.soLuong = soLuong;
+			setLoaiSP(2);
 		}
 		public void setKieuBac(string kieuBac)
 		{
@@ -83,7 +85,7 @@ namespace QuanLyCuaHangVangBac
 		}
 		public void TinhTongTien()
 		{
-			float TongTien = this.getDongia() / 100 * (100 - this.XetGiamGia());
+			float TongTien = this.getDonGia() / 100 * (100 - this.XetGiamGia());
 			Console.Write("Tong tien la: " + TongTien);
 		}
 	}
