@@ -3,7 +3,8 @@
     "additionalProbingPaths": [
       "C:\\Users\\taqua\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\taqua\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+      "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
     ]
   }
 }

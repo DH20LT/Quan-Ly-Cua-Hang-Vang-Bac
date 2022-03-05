@@ -65,7 +65,7 @@ namespace QuanLyCuaHangVangBac
 		{
 			return hangSX;
 		}
-		public int getDonGia()
+		public int getDongia()
 		{
 			return donGia;
 		}
@@ -73,7 +73,7 @@ namespace QuanLyCuaHangVangBac
 		{
 			Console.Write("Nhap ma san pham: ");
 			maSP = Console.ReadLine();
-			Console.Write("Nhap Ten san pham: ");
+			Console.Write("Nhap ma Ten san pham: ");
 			tenSP = Console.ReadLine();
 			Console.Write("Nhap hang san xuat: ");
 			hangSX = Console.ReadLine();
