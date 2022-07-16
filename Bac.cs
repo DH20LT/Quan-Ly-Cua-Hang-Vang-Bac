@@ -83,8 +83,11 @@ namespace QuanLyCuaHangVangBac
 			}
 			else { return 0; }
 		}
+
+		delegate float TongTien(float DonGia, float GiamGia);
 		public void TinhTongTien()
 		{
+			TongTien tt = (this.getDonGia(), this.XetGiamGia()) => this.getDonGia() / 100 * (100 - this.XetGiamGia());
 			float TongTien = this.getDonGia() / 100 * (100 - this.XetGiamGia());
 			Console.Write("Tong tien la: " + TongTien);
 		}
