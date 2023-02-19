@@ -6,7 +6,7 @@ namespace QuanLyCuaHangVangBac
     {
         static void Main(string[] args)
         {
-            Console.InputEncoding = System.Text.Encoding.Unicode;
+            Console.InputEncoding = System.Text.Encoding.Unicode; // Giúp hiển thị Tiếng Việt trên app Console
             Console.OutputEncoding = System.Text.Encoding.Unicode;
             
             VangBac[] arrVangBac = new VangBac[50];
